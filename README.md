@@ -110,8 +110,3 @@ The dataset contains Toronto traffic collision records with the following key fi
 - **Sprint 1**: Data loading, cleaning, and basic analytics
 - **Sprint 2**: Dashboard, visualizations, and refinements
 
-## Team Members
-
-- [Member 1 Name] - [Role]
-- [Member 2 Name] - [Role]
-- [Member 3 Name] - [Role]
