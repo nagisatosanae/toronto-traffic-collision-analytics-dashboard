@@ -18,28 +18,6 @@ This tool loads, cleans, and analyzes the Toronto Traffic Collisions Open Datase
 - **Data Processing**: pandas
 - **Visualization**: matplotlib / plotly
 
-## Project Structure
-
-```
-project/
-├── src/
-│   ├── __init__.py
-│   ├── data_loader.py          # Data loading and validation
-│   ├── data_cleaner.py         # Data cleaning and preprocessing
-│   ├── analytics.py            # Analysis functions
-│   └── visualizations.py       # Chart and plot generation
-├── tests/
-│   ├── test_data_loader.py
-│   ├── test_data_cleaner.py
-│   ├── test_analytics.py
-│   └── test_visualizations.py
-├── data/
-│   └── Traffic_Collisions_Open_Data.csv
-├── app.py                      # Streamlit dashboard
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
 
 ## Setup and Installation
 
@@ -105,7 +83,7 @@ The dataset contains Toronto traffic collision records with the following key fi
 
 ## Agile Project Management
 
-- **Project Board**: [Taiga Project Link]
+- **Project Board**: [https://tree.taiga.io/project/andyahn-toronto-traffic-collision-analytics-dashboard/timelinek](https://tree.taiga.io/project/andyahn-toronto-traffic-collision-analytics-dashboard/timeline)
 - **Sprints**: 2 one-week sprints
 - **Sprint 1**: Data loading, cleaning, and basic analytics
 - **Sprint 2**: Dashboard, visualizations, and refinements
