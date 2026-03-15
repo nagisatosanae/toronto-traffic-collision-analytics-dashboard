@@ -1,0 +1,18 @@
+toronto-collision-tool/
+│
+├── data/
+│   └── Traffic_Collisions_Open_Data.csv
+│
+├── src/
+│   ├── data_loader.py
+│   ├── cleaning.py
+│   ├── hourly_analysis.py
+│
+├── dashboard/
+│   └── app.py
+│
+├── tests/
+│   └── test_hourly_analysis.py
+│
+├── requirements.txt
+└── README.md
