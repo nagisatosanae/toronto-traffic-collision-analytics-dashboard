@@ -1,11 +1,26 @@
 import pandas as pd
 
-def get_collision_count_by_hour(df: pd.DataFrame) -> pd.DataFrame:
-    """Return collision counts grouped by hour."""
+HOUR_COLUMN = "OCC_HOUR"
+COUNT_COLUMN = "collision_count"
+
+
+def analyze_collisions_by_hour(collision_data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Aggregate collision counts by hour of the day.
+
+    Args:
+        collision_data: DataFrame containing collision records with OCC_HOUR column.
+
+    Returns:
+        DataFrame with columns [OCC_HOUR, collision_count], sorted by hour.
+    """
+    if HOUR_COLUMN not in collision_data.columns:
+        raise KeyError(f"{HOUR_COLUMN} column is required")
+
     return (
-        df.groupby("OCC_HOUR")
+        collision_data.groupby(HOUR_COLUMN)
         .size()
-        .reset_index(name="COUNT")
-        .sort_values("OCC_HOUR")
+        .reset_index(name=COUNT_COLUMN)
+        .sort_values(HOUR_COLUMN)
         .reset_index(drop=True)
     )
