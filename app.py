@@ -8,8 +8,7 @@ import streamlit as st
 from src.data_loader import load_dataset
 from src.clean_data import clean_collision_data
 from src.analytics import analyze_collisions_by_hour, analyze_collisions_by_neighbourhood
-from src.hourly_visualization import create_hourly_chart
-from src.hotspot_visualization import create_hotspot_chart
+from src.visualizations import create_hourly_chart, create_hotspot_chart
 from src.filters import filter_by_year
 
 PAGE_TITLE = "Toronto Traffic Collision Analytics"

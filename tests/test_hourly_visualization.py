@@ -2,8 +2,10 @@
 
 import pytest
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from src.hourly_visualization import create_hourly_chart
+from src.visualizations import create_hourly_chart
 
 
 class TestHourlyChart:

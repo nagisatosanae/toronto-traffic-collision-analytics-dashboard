@@ -1,7 +1,7 @@
 """Tests for collision severity analytics (Story #5)."""
 
 import pandas as pd
-from src.severity_analytics import analyze_collision_severity
+from src.analytics.severity import analyze_collision_severity
 
 
 class TestSeverityAnalytics:
