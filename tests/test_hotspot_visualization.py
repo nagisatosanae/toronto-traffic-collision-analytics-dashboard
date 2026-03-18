@@ -2,6 +2,8 @@
 
 import pytest
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from src.visualizations import create_hotspot_chart
 
