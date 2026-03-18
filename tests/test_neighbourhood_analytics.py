@@ -2,7 +2,7 @@
 
 import pytest
 import pandas as pd
-from src.neighbourhood_analytics import analyze_collisions_by_neighbourhood
+from src.analytics import analyze_collisions_by_neighbourhood
 
 
 class TestAnalyzeByNeighbourhood:

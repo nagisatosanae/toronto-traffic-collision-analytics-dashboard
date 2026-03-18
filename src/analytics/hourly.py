@@ -1,7 +1,6 @@
-"""Analytics module for Toronto Traffic Collision dataset.
+"""Hourly collision analytics module.
 
-Provides functions to aggregate and summarize collision data
-for analytical and visualization purposes.
+Provides functions to aggregate collision data by hour of day.
 """
 
 import pandas as pd

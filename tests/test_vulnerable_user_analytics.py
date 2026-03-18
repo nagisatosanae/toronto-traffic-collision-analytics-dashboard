@@ -1,7 +1,7 @@
 """Tests for pedestrian and cyclist analytics (Story #6)."""
 
 import pandas as pd
-from src.vulnerable_user_analytics import analyze_vulnerable_users
+from src.analytics import analyze_vulnerable_users
 
 
 class TestVulnerableUserAnalytics:
