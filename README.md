@@ -18,6 +18,29 @@ This tool loads, cleans, and analyzes the Toronto Traffic Collisions Open Datase
 - **Data Processing**: pandas
 - **Visualization**: matplotlib / plotly
 
+## Project Structure
+
+```
+├── app.py                          # Streamlit dashboard entry point
+├── src/
+│   ├── data_loader.py              # Data loading and validation
+│   ├── clean_data.py               # Data cleaning and preprocessing
+│   ├── filters.py                  # Year filtering utilities
+│   ├── analytics/
+│   │   ├── hourly.py               # Collisions by hour analysis
+│   │   ├── neighbourhood.py        # Collisions by neighbourhood analysis
+│   │   ├── severity.py             # Collision severity analysis
+│   │   └── vulnerable_users.py     # Pedestrian and cyclist analysis
+│   └── visualizations/
+│       ├── hourly_chart.py         # Hourly collision bar chart
+│       └── hotspot_chart.py        # Neighbourhood hotspot chart
+├── tests/                          # pytest test files
+├── data/
+│   └── Traffic_Collisions_Open_Data.csv  (not tracked)
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
 
 ## Setup and Installation
 
@@ -52,6 +75,8 @@ This tool loads, cleans, and analyzes the Toronto Traffic Collisions Open Datase
 ```bash
 streamlit run app.py
 ```
+> [!NOTE]
+> Do **not** use `python app.py`. Streamlit apps must be launched with the `streamlit run` command to start the web server and open the dashboard in your browser.
 
 ### Run Tests
 ```bash
