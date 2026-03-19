@@ -21,10 +21,12 @@ class TestDashboard:
                 "OCC_HOUR": [1, 2],
                 "OCC_YEAR": [2022, 2023],
                 "NEIGHBOURHOOD_158": ["A", "B"],
-                "FATALITIES": [0, 0],
+                "FATALITIES": [0, 1],
                 "INJURY_COLLISIONS": ["YES", "NO"],
                 "FTR_COLLISIONS": ["NO", "YES"],
-                "PD_COLLISIONS": ["NO", "NO"]
+                "PD_COLLISIONS": ["NO", "NO"],
+                "PEDESTRIAN": ["YES", "NO"],
+                "BICYCLE": ["NO", "YES"],
             })
             main()
 
@@ -51,7 +53,9 @@ class TestDashboard:
                 "FATALITIES": [0],
                 "INJURY_COLLISIONS": ["YES"],
                 "FTR_COLLISIONS": ["NO"],
-                "PD_COLLISIONS": ["NO"]
+                "PD_COLLISIONS": ["NO"],
+                "PEDESTRIAN": ["YES"],
+                "BICYCLE": ["NO"],
             })
             main()
             mock_title.assert_called_once()
