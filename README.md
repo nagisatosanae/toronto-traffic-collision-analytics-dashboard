@@ -18,13 +18,36 @@ This tool loads, cleans, and analyzes the Toronto Traffic Collisions Open Datase
 - **Data Processing**: pandas
 - **Visualization**: matplotlib / plotly
 
+## Project Structure
+
+```
+├── app.py                          # Streamlit dashboard entry point
+├── src/
+│   ├── data_loader.py              # Data loading and validation
+│   ├── clean_data.py               # Data cleaning and preprocessing
+│   ├── filters.py                  # Year filtering utilities
+│   ├── analytics/
+│   │   ├── hourly.py               # Collisions by hour analysis
+│   │   ├── neighbourhood.py        # Collisions by neighbourhood analysis
+│   │   ├── severity.py             # Collision severity analysis
+│   │   └── vulnerable_users.py     # Pedestrian and cyclist analysis
+│   └── visualizations/
+│       ├── hourly_chart.py         # Hourly collision bar chart
+│       └── hotspot_chart.py        # Neighbourhood hotspot chart
+├── tests/                          # pytest test files
+├── data/
+│   └── Traffic_Collisions_Open_Data.csv  (not tracked)
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
 
 ## Setup and Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-org>/<repo-name>.git
-   cd <repo-name>
+   git clone https://github.com/nagisatosanae/toronto-traffic-collision-analytics-dashboard.git
+   cd toronto-traffic-collision-analytics-dashboard
    ```
 
 2. Create and activate a virtual environment:
@@ -52,6 +75,10 @@ This tool loads, cleans, and analyzes the Toronto Traffic Collisions Open Datase
 ```bash
 streamlit run app.py
 ```
+After running, open [http://localhost:8501](http://localhost:8501) in your browser to view the dashboard.
+
+> [!NOTE]
+> Do **not** use `python app.py`. Streamlit apps must be launched with the `streamlit run` command to start the web server.
 
 ### Run Tests
 ```bash
@@ -80,6 +107,18 @@ The dataset contains Toronto traffic collision records with the following key fi
 | BICYCLE | Bicycle involvement |
 | PEDESTRIAN | Pedestrian involvement |
 | MOTORCYCLE | Motorcycle involvement |
+
+## Dashboard Features
+
+The Streamlit dashboard provides:
+
+- **Overview Metrics** — Total Collisions, Fatal, Injury, and Pedestrian counts at a glance
+- **Year Filter** — Filter all charts by year via the sidebar
+- **4 Analysis Tabs**:
+  - **Hourly Analysis** — Bar chart of collisions by hour of day
+  - **Neighbourhood Hotspots** — Top high-risk areas ranked by collision count
+  - **Severity Breakdown** — Fatal, Injury, FTR, and Property Damage comparison
+  - **Vulnerable Road Users** — Pedestrian vs Cyclist collision breakdown
 
 ## Agile Project Management
 
